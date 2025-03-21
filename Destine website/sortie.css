@@ -1,0 +1,315 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body * {
+    display: block;
+}
+
+/* LOGO */
+
+/* .logo {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+} */
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.logo img {
+    animation-name: logo-move;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes logo-move {
+    from {
+        width: 300px;
+        height: auto;
+        /* position: absolute;
+        top: 50%;
+        left: 50%; */
+        transform: translate(-50%, -50%);
+    }
+
+    to {
+        width: 100px;
+        height: auto;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        transform: none;
+    }
+}
+
+/* MENU */
+
+.allmenu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 190px;
+}
+
+.image-menu {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 80px;
+}
+
+.image-menu:hover {
+    transform: scale(1.05);
+}
+
+#menu-bouton {
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+#menu-bouton:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    background-color: #fff;
+    font-weight: bolder;
+}
+
+#menu-bouton:hover+.menu,
+.menu:focus,
+.menu:hover {
+    opacity: 1;
+    visibility: visible;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul a:hover {
+    text-decoration: none;
+    color: magenta;
+}
+
+/* CONTAINER */
+
+.alldiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.container {
+    font-size: 20px;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    color: #3c096c;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+.titre-container,
+.lien-container {
+    width: 100%;
+    /* Prendre toute la largeur */
+    max-width: 300px;
+    /* Limiter la largeur maximale */
+    font-weight: bolder;
+    text-align: justify;
+    padding: 0 0;
+}
+
+#span1 {
+    color: black;
+}
+
+#span2,
+.lien-container {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#span2:hover,
+.lien-container:hover {
+    color: magenta;
+    text-decoration: underline;
+}
+
+.image-container {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.lien-p {
+    position: relative;
+    bottom: 40px;
+    left: 30px;
+}
+
+.android-image-container {
+    width: 30px;
+    height: auto;
+    position: relative;
+}
+
+.sous-container {
+    margin-left: 10px;
+    /* Ajuster la marge pour le responsive */
+    padding-top: 20px;
+}
+
+/* IMAGE DESTINE */
+
+.destine-image {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.destine-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.destine-image img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+
+.allfooter {
+    background-color: #333;
+    border-right: 1px solid #333;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    bottom: -20px;
+    width: 97.3%;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0aaff;
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #e0aaff;
+}
+
+.image-instagram,
+.android-image {
+    width: 20px;
+    height: auto;
+}
+
+.lienfooter {
+    text-decoration: none;
+    color: #e0aaff;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.lienfooter:hover {
+    color: magenta;
+    text-decoration: underline;
+}
+
+/* BOUTON REMONTER */
+
+#bouton-remonter {
+    margin: auto;
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bouton-remonter a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#bouton-remonter a:hover {
+    color: magenta;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 380px) {
+    
+    .logo img {
+        width: 90px;
+    }
+
+    .allmenu {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        margin: 0 auto;
+        width: 100px;
+    }
+
+    .image-menu {
+        width: 50px;
+        margin: 0 auto;
+        margin-left: 50px;
+    }
+
+    .alldiv {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        margin-left: 30px;
+        width: 100%;
+    }
+
+    .destine-image {
+        margin-left: 30px;
+        width: 100%;
+    }
+}
