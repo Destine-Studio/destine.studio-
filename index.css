@@ -474,7 +474,7 @@ img {
   text-decoration: none;
 }
 
-/* RESPONSIVE */
+/* MODE RESPONSIVE */
 
 @media (min-width: 1025px) and (max-width: 1366px) {
   header {
