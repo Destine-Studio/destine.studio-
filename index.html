@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" type="image/png" href="image/destine.png" />
+    <link rel="icon" type="image/png" href="image/destine-logo-complet.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Destine Studio : Agence web & réseau social du cinéma</title>
     <meta
@@ -24,97 +24,46 @@
 
     <header>
       <div class="logo" id="remonter">
-        <a href="https://destine.studio/bienvenue" target="_blank"
+        <a href="https://app.destine.studio/" target="_blank"
           ><img src="image/logo.png" alt="Logo Destine"
         /></a>
       </div>
 
       <!-- <p id="slogan">Tout pour réussir</p> -->
 
+      <!-- HTML -->
       <div class="allmenu">
-        <a id="menu-bouton" href="#liste-menu"
-          ><img
-            class="image-menu"
-            src="image/menu-burger.png"
-            alt="https://www.flaticon.com/free-icon/menu_10308969?term=menu+burger&page=1&position=62&origin=search&related_id=10308969"
-          />
-        </a>
+        <button id="menu-bouton">
+          <img class="image-menu" src="image/menu-burger.png" alt="Menu" />
+        </button>
 
-        <div class="menu" id="liste-menu">
+        <nav class="menu" id="liste-menu">
           <ul>
-            <a href="index.html">
-              <li>Accueil</li>
-            </a>
-            <a href="contact.html">
-              <li>Contact</li>
-            </a>
-            <a href="projet.html">
-              <li>Nos projets</li>
-            </a>
-            <a href="postule.html">
-              <li>Offres d'emploi</li>
-            </a>
-            <a href="sortie.html">
-              <li>André Destine</li>
-            </a>
-            <a href="https://destine.studio/bienvenue">
-              <li>Ouvrir Destine</li>
-            </a>
-            <a href="https://apps.apple.com/us/app/destine/id6517356985">
-              <li>Destine App IOS</li>
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.favconseilettechnologie.destine"
-            >
-              <li>Destine App Androide</li>
-            </a>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projet.html">Nos projets</a></li>
+            <li><a href="postule.html">Offres d'emploi</a></li>
+            <li><a href="sortie.html">André Destine</a></li>
+            <li>
+              <a href="https://app.destine.studio">Ouvrir Destine Studio</a>
+            </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </header>
 
     <div class="accordeon" id="sousbar1">
       <input type="checkbox" id="accordeon1" class="accordeon-checkbox" />
       <label for="accordeon1" class="accordeon-button"
-        >Explorez les catalogues</label
+        >Voir les prochianes sorties cinéma</label
       >
       <div class="accordeon-content">
         <div class="boite-lien">
           <a
             class="liennav"
-            href="https://destine.studio/cinema"
+            href="https://app.destine.studio/films"
             target="_blank"
-            >Prochaines sorties Cinéma</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/sponsors"
-            target="_blank"
-            >Sponsors</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/investir"
-            target="_blank"
-            >Aides financières audiovisuelles</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/musique"
-            target="_blank"
-            >Musique</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/scenario"
-            target="_blank"
-            >Scénarios</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/talents"
-            target="_blank"
-            >Talents et figurants</a
+            >Découvrir</a
           >
         </div>
       </div>
@@ -123,64 +72,35 @@
     <div class="accordeon" id="sousbar2">
       <input type="checkbox" id="accordeon2" class="accordeon-checkbox" />
       <label for="accordeon2" class="accordeon-button"
-        >Explorez la ID-ligne</label
+        >Réseau social du cinéma et de l'audiovisuel</label
       >
       <div class="accordeon-content">
         <div class="boite-lien">
-          <a class="liennav" href="https://destine.studio/video" target="_blank"
-            >Films-courts</a
-          >
-          <a class="liennav" href="https://destine.studio/forum" target="_blank"
-            >Forums</a
-          >
           <a
             class="liennav"
-            href="https://destine.studio/actualite"
+            href="https://app.destine.studio/feed"
             target="_blank"
-            >Actualités</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/Podcast"
-            target="_blank"
-            >Podcast</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/Montage"
-            target="_blank"
-            >Outils montage vidéo</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/Publicite"
-            target="_blank"
-            >Partage Publicité</a
-          >
-          <a
-            class="liennav"
-            href="https://destine.studio/messagerie"
-            target="_blank"
-            >Messagerie</a
+            >Gim Toli</a
           >
         </div>
       </div>
     </div>
 
     <p id="presentation">
-      <a href="https://destine.studio/"><strong>Destine Studio</strong></a> est
-      une agence de développement web basée à Saint-Laurent du Maroni,
-      spécialisée dans la création de sites internet et d'applications mobiles
-      no-code via FlutterFlow. <br /><br />
+      <a href="https://app.destine.studio/"><strong>Destine Studio</strong></a>
+      est une agence web basée à Saint-Laurent du Maroni, spécialisée dans la
+      création de sites internet et d'applications mobiles personnalisés.
+      <br /><br />
       Née d'une passion pour le cinéma,
-      <a href="https://destine.studio/" target="_blank">Destine Studio</a> reste
-      aussi un réseau social du cinéma dédié aux passionnés du 7ᵉ art.
+      <a href="https://app.destine.studio/" target="_blank">Destine Studio</a>
+      reste aussi un réseau social du cinéma et de l'audiovisuel dédié aux
+      passionnés du 7ᵉ art. Et Futur NETFLIX "made in Guyane".
     </p>
 
     <div class="container">
       <h2>
         Découvrez les prochaines sorties cinéma sur &nbsp
-        <a href="https://destine.studio/cinema">Destine !</a>
+        <a href="https://app.destine.studio/films">Destine Stduio !</a>
       </h2>
 
       <div class="slideshow-container">
@@ -229,6 +149,14 @@
           dots[slideIndex - 1].className += " active";
           setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
+
+        // JS
+        const bouton = document.getElementById("menu-bouton");
+        const menu = document.getElementById("liste-menu");
+
+        bouton.addEventListener("click", () => {
+          menu.classList.toggle("open");
+        });
       </script>
     </div>
     <div class="services-section">
@@ -250,6 +178,11 @@
           <h3>Accompagnement personnalisé</h3>
           <p>De l’idée au lancement, on vous guide.</p>
         </div>
+      </div>
+
+      <!-- Bouton vers la page contact -->
+      <div class="services-contact">
+        <a href="contact.html" class="btn-contact">Nous contacter</a>
       </div>
     </div>
 

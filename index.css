@@ -10,9 +10,7 @@ body {
 /* html {
   scroll-behavior: smooth;
 } */
-
 /* WELCOME SLIDE */
-
 .welcome-slide {
   z-index: 1000;
   position: fixed;
@@ -23,25 +21,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #240046;
-
-  color: white;
-  font-size: 50px;
-
-  animation: slideOut 3s forwards 2s;
+  background: linear-gradient(135deg, #240046, #3c096c);
+  animation: fadeOut 3s forwards 2.5s; /* durée + délai */
 }
 
-@keyframes slideOut {
+.welcome-slide img {
+  width: 200px;
+  height: auto;
+  animation: logoIntro 2s ease-in-out;
+}
+
+/* Animation du logo (zoom + fade-in) */
+@keyframes logoIntro {
   0% {
-    transform: translateX(0);
+    opacity: 0;
+    transform: scale(0.7);
   }
-
-  98% {
-    transform: translateX(100%);
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
   }
-
   100% {
-    display: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation de sortie (fade + zoom out) */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+    visibility: hidden;
   }
 }
 
@@ -57,12 +72,6 @@ header {
   padding: 5px 5px;
   height: 65px;
 }
-
-/* .logo {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-} */
 
 .logo img {
   width: 100px;
@@ -104,55 +113,58 @@ header {
 
 /* MENU */
 
-/* .allmenu {
-    position: relative;
-    left: 1310px;
-    bottom: 55px;
-    width: 190px;
-} */
-
+/* CSS */
 .image-menu {
-  width: 50px;
-  height: auto;
+  width: 40px;
   transition: transform 0.2s ease-in-out;
 }
 
 .image-menu:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 #menu-bouton {
   cursor: pointer;
-  transition: opacity 0.5s ease-in-out;
-  transition: transform 0.2s ease-in-out;
-}
-
-#menu-bouton:hover {
-  transform: scale(1.05);
+  background: none;
+  border: none;
 }
 
 .menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  background-color: #fff;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
 }
 
-#menu-bouton:hover + .menu,
-.menu:focus,
-.menu:hover {
+.menu.open {
   opacity: 1;
   visibility: visible;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.menu ul li {
+  margin: 10px 0;
 }
 
 .menu ul a {
   text-decoration: none;
-  color: black;
+  color: #333;
+  font-weight: 500;
 }
 
 .menu ul a:hover {
-  text-decoration: none;
   color: magenta;
 }
 
@@ -369,6 +381,28 @@ img {
 .service-item p {
   font-size: 16px;
   color: #240046;
+}
+
+/* Bouton */
+
+.services-contact {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #240046;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-contact:hover {
+  background-color: magenta;
 }
 
 /* FOOTER */

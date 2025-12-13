@@ -1,361 +1,248 @@
 body {
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: #240046;
 }
 
 /* HEADER */
-
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #240046;
+  padding: 10px 20px;
+  height: 65px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* LOGO */
-
 .logo img {
-    width: 100px;
-    height: auto;
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
 }
 
-.logo img {
-    animation-name: logo-move;
-    animation-delay: 0s;
-    animation-duration: 3s;
-    animation-timing-function: ease;
-    animation-iteration-count: 1;
+.logo img:hover {
+  transform: scale(1.05);
 }
 
-@keyframes logo-move {
-    from {
-        width: 300px;
-        height: auto;
-        /* position: absolute;
-        top: 50%;
-        left: 50%; */
-        transform: translate(-50%, -50%);
-    }
-
-    to {
-        width: 100px;
-        height: auto;
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        transform: none;
-    }
-}
-
-/* MENU */
-
+/* MENU BURGER */
 .allmenu {
-    width: 190px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
 .image-menu {
-    width: 50px;
-    height: auto;
-    transition: transform 0.2s ease-in-out;
+  width: 40px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .image-menu:hover {
-    transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 #menu-bouton {
-    cursor: pointer;
-    transition: opacity 0.5s ease-in-out;
-    transition: transform 0.2s ease-in-out;
-}
-
-#menu-bouton:hover {
-    transform: scale(1.05);
+  cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .menu {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    background-color: #fff;
-    font-weight: bolder;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
 }
 
-#menu-bouton:hover+.menu,
-.menu:focus,
-.menu:hover {
-    opacity: 1;
-    visibility: visible;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.menu ul li {
+  margin: 10px 0;
 }
 
 .menu ul a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: #240046;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
 }
 
 .menu ul a:hover {
-    text-decoration: none;
-    color: magenta;
+  color: magenta;
 }
-
 
 /* CAROUSEL */
-
-
 .carousel {
-    width: 100%;
-    max-width: 600px;
-    overflow: hidden;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-}
-
-.carousel:hover {
-    transform: scale(1.05);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
 }
 
 .carousel-images {
-    display: flex;
-    transition: transform 1s ease-in-out;
-    /* Ajoute une transition pour un effet de défilement fluide */
+  display: flex;
+  animation: slide 15s infinite;
 }
 
 .carousel-images img {
-    width: 100%;
-    max-width: 600px;
-    /* Ajuste la largeur des images pour qu'elles s'adaptent au carrousel */
-}
-
-.carousel-images {
-    animation: slide 20s infinite;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
 }
 
 @keyframes slide {
-    0% {
-        transform: translateX(0%);
-        /* Permet de déplacer un élément horizontalement sur sa propre largeur vers la droite */
-    }
-
-    14% {
-        transform: translateX(-100%);
-    }
-
-    28% {
-        transform: translateX(-100%);
-    }
-
-    42% {
-        transform: translateX(0%);
-    }
-
-    56% {
-        transform: translateX(0%);
-        /* Permet de déplacer un élément horizontalement sur sa propre largeur vers la droite */
-    }
-
-    70% {
-        transform: translateX(-100%);
-    }
-
-    84% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
+  0%,
+  20% {
+    transform: translateX(0%);
+  }
+  40%,
+  60% {
+    transform: translateX(-100%);
+  }
+  80%,
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /* CARDS */
-
 .alldiv1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .card1,
 .card2 {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    font-size: 17px;
-    background-color: #fff;
-    color: #3c096c;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-    font-weight: bolder;
-    margin-top: 20px;
-    font-size: 20px;
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  color: #3c096c;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: transform 0.3s ease-in-out;
 }
 
-.card1:hover {
-    transform: scale(1.05);
-}
-
-.card1 ul li:hover {
-    color: black;
-}
-
-.card1 ul p {
-    color: magenta;
-    font-weight: bolder;
-}
-
+.card1:hover,
 .card2:hover {
-    transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.card2 ul li:hover {
-    color: black;
-}
-
+.card1 ul p,
 .card2 ul p {
-    color: magenta;
-    font-weight: bolder;
+  color: magenta;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .card2 a {
-    text-decoration: none;
-    color: magenta;
-    font-weight: bolder;
+  text-decoration: none;
+  color: magenta;
+  font-weight: bold;
 }
 
 .card2 a:hover {
-    color: black;
-    font-weight: bolder;
+  color: #240046;
 }
 
 /* FOOTER */
-
-
 .allfooter {
-    background-color: #333;
-    border-right: 1px solid #333;
-    color: #fff;
-    padding: 20px;
-    position: relative;
-    bottom: -20px;
-    width: 97.3%;
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  background-color: #240046;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .footer1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #e0aaff;
+  margin-bottom: 10px;
+  color: #e0aaff;
 }
 
 .footer2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: #e0aaff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e0aaff;
 }
 
 .image-instagram,
 .android-image {
-    width: 20px;
-    height: auto;
+  width: 20px;
+  height: auto;
 }
 
 .lienfooter {
-    text-decoration: none;
-    color: #e0aaff;
-    cursor: pointer;
-    margin: 10px 0;
+  text-decoration: none;
+  color: #e0aaff;
+  margin: 8px 0;
+  transition: color 0.2s ease-in-out;
 }
 
 .lienfooter:hover {
-    color: magenta;
-    text-decoration: underline;
+  color: magenta;
 }
 
 /* BOUTON REMONTER */
-
 #bouton-remonter {
-    margin: auto;
-    background-color: #444;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  margin: 15px auto;
+  background-color: #444;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #bouton-remonter a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 #bouton-remonter a:hover {
-    color: magenta;
-    text-decoration: none;
+  color: magenta;
 }
-
 
 /* RESPONSIVE */
+@media only screen and (max-width: 820px) {
+  .carousel,
+  .card1,
+  .card2 {
+    width: 95%;
+  }
 
+  .allmenu {
+    top: 10px;
+    right: 10px;
+  }
 
-@media only screen and (min-width: 820px) and (max-width: 1024px) {
-    .image-menu {
-        margin-top: 5px;
-        margin-left: 50px;
-    }
-}
-
-@media only screen and (max-width: 380px) {
-
-    .allmenu {
-        width: 110px;
-    }
-
-    .image-menu {
-        margin-top: 5px;
-        margin-left: 50px;
-    }
-
-    .alldiv1 {
-        margin-top: -200px;
-        max-width: 100%;
-    }
-
-    .card1,
-    .card2 {
-        width: 90%;
-        margin: 20px 0;
-    }
-
-    .carousel {
-        width: 90%;
-    }
-
-    .allfooter {
-        width: 96%;
-        padding: 10px;
-        bottom: 0px;
-    }
-
-    .footer1 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer2 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #bouton-remonter {
-        position: relative;
-        left: 0px;
-    }
+  .image-menu {
+    width: 35px;
+  }
 }
