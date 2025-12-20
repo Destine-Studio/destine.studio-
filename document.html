@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Documents juridiques – Destine Studio</title>
+    <link rel="stylesheet" href="document.css" />
+    <link rel="icon" type="image/png" href="image/destine-logo-complet.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo" id="remonter">
+        <a href="index.html">
+          <img src="image/logo.png" alt="Logo Destine Studio" />
+        </a>
+      </div>
+
+      <div class="allmenu">
+        <button id="menu-bouton">
+          <img class="image-menu" src="image/menu-burger.png" alt="Menu" />
+        </button>
+
+        <nav class="menu" id="liste-menu">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projet.html">Nos projets</a></li>
+            <li><a href="postule.html">Offres d'emploi</a></li>
+            <li><a href="sortie.html">André Destine</a></li>
+            <li><a href="document.html">Documents juridiques</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SECTION DOCUMENTS -->
+    <section class="documents-section">
+      <h1>Documents juridiques</h1>
+
+      <div class="document-item">
+        <h2>Conditions Générales d’Utilisation (CGU)</h2>
+        <a
+          href="document/CGU destine studio.pdf"
+          target="_blank"
+          class="pdf-link"
+          >📄 Ouvrir le document</a
+        >
+      </div>
+
+      <div class="document-item">
+        <h2>Conditions Générales de Vente (CGV)</h2>
+        <a
+          href="document/CGV destine studio.pdf"
+          target="_blank"
+          class="pdf-link"
+          >📄 Ouvrir le document</a
+        >
+      </div>
+
+      <div class="document-item">
+        <h2>Charte de modération</h2>
+        <a
+          href="document/Charte de Moderation destine studio.pdf"
+          target="_blank"
+          class="pdf-link"
+          >📄 Ouvrir le document</a
+        >
+      </div>
+
+      <div class="document-item">
+        <h2>Politique de confidentialité</h2>
+        <a
+          href="document/Politique de Confidentialite destine studio.pdf"
+          target="_blank"
+          class="pdf-link"
+          >📄 Ouvrir le document</a
+        >
+      </div>
+
+      <div class="document-item">
+        <h2>Politique publicitaire</h2>
+        <a
+          href="document/Politique Publicitaire destine studio.pdf"
+          target="_blank"
+          class="pdf-link"
+          >📄 Ouvrir le document</a
+        >
+      </div>
+
+      <div class="document-item">
+        <h2>Mentions légales</h2>
+        <a
+          href="document/Mentions legales destine studio.pdf"
+          target="_blank"
+          class="pdf-link"
+          >📄 Ouvrir le document</a
+        >
+      </div>
+    </section>
+
+    <!-- SECTION SUPPORT -->
+    <section class="support-section">
+      <h1>Support & Assistance</h1>
+
+      <div class="support-item">
+        <h2>Contact général</h2>
+        <p>Pour toute demande administrative ou organisationnelle :</p>
+        <p class="email">📧 secretariat.destinestudio@gmail.com</p>
+      </div>
+
+      <div class="support-item">
+        <h2>Support technique</h2>
+        <p>Pour un problème technique, une aide spécifique ou un bug :</p>
+        <p class="email">📧 info.destinestudio@gmail.com</p>
+      </div>
+
+      <div class="support-item">
+        <h2>Demandes liées à un évènement, film ou festival</h2>
+        <p>Pour toute demande d’information liée à un contenu culturel :</p>
+        <p class="email">📧 contact.destinestudio@gmail.com</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="allfooter">
+      <div class="footer1">
+        <p class="footer-paragraphe1">
+          © 2026 Destine SAS. Tous droits réservés.
+        </p>
+      </div>
+
+      <button id="bouton-remonter">
+        <a class="lienremonter" href="#remonter">Remonter en haut</a>
+      </button>
+
+      <div class="footer2">
+        <a class="lienfooter" href="https://app.destine.studio" target="_blank"
+          >https://app.destine.studio/</a
+        >
+        <a class="lienfooter" href="index.html">Page d'accueil</a>
+        <a class="lienfooter" href="contact.html">Nous contacter</a>
+        <a class="lienfooter" href="postule.html">Offres d'emploi</a>
+        <a class="lienfooter" href="projet.html">Nos projets</a>
+        <a class="lienfooter" href="sortie.html">André Destine</a>
+        <a class="lienfooter" href="document.html">Documents juridiques</a>
+        <a
+          class="lienfooter"
+          href="https://www.instagram.com/destine_studio/"
+          target="_blank"
+        >
+          <img
+            class="image-instagram"
+            src="image/instagram.png"
+            alt="Instagram Destine Studio"
+          />
+          : @destine_studio
+        </a>
+      </div>
+    </footer>
+
+    <!-- SCRIPT MENU -->
+    <script>
+      const bouton = document.getElementById("menu-bouton");
+      const menu = document.getElementById("liste-menu");
+
+      bouton.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
