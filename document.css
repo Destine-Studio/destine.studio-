@@ -114,6 +114,14 @@ h1 {
   margin-bottom: 30px;
 }
 
+#vigueur {
+  text-align: center;
+  color: #3c096c;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: small;
+}
+
 h2 {
   color: #240046;
   margin-bottom: 10px;
@@ -300,14 +308,5 @@ h2 {
   /* FOOTER */
   .footer2 {
     font-size: 0.9rem;
-  }
-
-  /* BOUTON REMONTER */
-  #bouton-remonter {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    margin: 0;
-    z-index: 999;
   }
 }
