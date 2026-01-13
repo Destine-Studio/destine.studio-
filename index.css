@@ -405,6 +405,88 @@ img {
   background-color: magenta;
 }
 
+/* Portfolio */
+
+/* SECTION PORTFOLIO */
+.portfolio-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin: 40px 10px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.portfolio-section h2 {
+  font-size: 32px;
+  color: #240046;
+  margin-bottom: 30px;
+}
+
+.portfolio-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-item {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.portfolio-item h3 {
+  font-size: 22px;
+  color: #ff00ff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-item a:hover h3 {
+  color: #240046;
+}
+
+/* Responsive pour portfolio */
+@media only screen and (max-width: 820px) {
+  .portfolio-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-item {
+    width: 90%;
+  }
+
+  .portfolio-section h2 {
+    font-size: 24px;
+  }
+
+  .portfolio-item h3 {
+    font-size: 20px;
+  }
+}
+
 /* FOOTER */
 
 .allfooter {
