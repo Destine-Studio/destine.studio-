@@ -579,7 +579,7 @@ img {
     text-align: center;
   }
 
-  .welcome-slide {
+  /* .welcome-slide {
     display: none;
   }
 
@@ -590,7 +590,7 @@ img {
   .logo img {
     animation-name: logo-move;
     animation-delay: 0s;
-  }
+  } */
 
   header h1 {
     font-size: 17px;
