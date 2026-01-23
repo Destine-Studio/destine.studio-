@@ -231,7 +231,7 @@ header {
   /* font-family: cursive; */
   font-size: 30px;
   padding: 10px 10px;
-  text-align: justify;
+  text-align: center;
   text-justify: inter-word;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -651,8 +651,17 @@ img {
 
   #presentation {
     font-size: 15px;
+    line-height: 1.6;
     max-width: 100%;
-    margin: 10px 5px;
+    margin: 20px auto;
+    padding: 10px 12px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+  }
+  #presentation a {
+    color: magenta;
+    font-weight: 600;
   }
 
   .container {

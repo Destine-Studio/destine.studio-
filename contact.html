@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
@@ -108,18 +108,35 @@
             </li>
 
             <li>
-              <a id="map-bouton" href="#adresse-postale">Voir notre position</a>
-              <div class="map" id="adresse-postale">
-                <a href="#">Saint-Laurent du Maroni</a>
-              </div>
+              <a id="map-bouton" href="#click-map">
+                Voir notre position ci-dessous !
+              </a>
             </li>
           </ul>
         </div>
       </div>
 
+      <div class="map-container" id="click-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1737.7194302261214!2d-54.018775082063684!3d5.4879038858857525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1769178537961!5m2!1sfr!2sfr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+
       <!-- FORMULAIRE DE CONTACT -->
       <section class="contact-form-section">
-        <h2>Demander un devis</h2>
+        <p>
+          <strong>Site web</strong> : Dépend de la complexité du site, à partir
+          de 300€ par page web + 100€ pour l'hébergement
+          <br />
+          <br />
+          <strong>Application</strong> : Dépend des fonctionnalités, à partir de
+          10 000€
+        </p>
+        <h2>Demander un devis personnalisé</h2>
         <form action="send_mail.php" method="POST" class="form-contact">
           <label for="nom">Nom :</label>
           <input type="text" id="nom" name="nom" required />
