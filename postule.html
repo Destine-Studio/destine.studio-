@@ -154,29 +154,30 @@
 </div>
 
 <!-- FORMULAIRE DE CANDIDATURE -->
-<div class="card card-form">
-  <p>Envoyer votre candidature :</p>
-  <form id="postule-form" class="form-contact">
+<div class="card-form">
+  <p>Envoyer une candidature</p>
 
-  <label for="nom">Nom :</label>
-  <input type="text" id="nom" name="nom" required />
+  <form id="postule-form" class="form-candidature">
 
-  <label for="email">Email :</label>
-  <input type="email" id="email" name="email" required />
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required />
 
-  <label for="cv">Lien vers votre CV (Google Drive, Dropbox, etc.) :</label>
-  <input type="url" id="cv" name="cv" placeholder="https://drive.google.com/..." required />
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required />
 
-  <label for="lm">Lien vers votre lettre de motivation :</label>
-  <input type="url" id="lm" name="lm" placeholder="https://drive.google.com/..." />
+    <label for="cv">Lien vers votre CV (Google Drive, Dropbox, etc.) :</label>
+    <input type="url" id="cv" name="cv" placeholder="https://drive.google.com/..." required />
 
-  <label for="message">Message :</label>
-  <textarea id="message" name="message" rows="6"></textarea>
+    <label for="lm">Lien vers votre lettre de motivation :</label>
+    <input type="url" id="lm" name="lm" placeholder="https://drive.google.com/..." />
 
-  <button type="submit">Envoyer la candidature</button>
-</form>
+    <label for="message">Message :</label>
+    <input type="text" id="message" name="message" />
 
+    <button type="submit">Envoyer la candidature</button>
+  </form>
 </div>
+
 
 
 
@@ -230,7 +231,9 @@
       });
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      
+    </script>
     <script>
   emailjs.init("3Cvi_lOGTUbRJhaB6");
 
@@ -243,8 +246,8 @@
       cv: document.getElementById("cv").value,
       lm: document.getElementById("lm").value,
       message: document.getElementById("message").value,
-      telephone: "",   // vide pour ce formulaire
-      type: "candidature" // utile pour ton template
+      telephone: "",
+      type: "candidature"
     };
 
     emailjs.send("service_ln1uegx", "template_zt1wcyg", params)
@@ -258,6 +261,7 @@
       });
   });
     </script>
+
 
 
 
