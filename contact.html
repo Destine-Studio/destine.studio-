@@ -52,8 +52,8 @@
           <h2 class="titre-container">Pour nous contacter :</h2>
           <ul>
             <li>
-              <span id="span1">Mail :</span>
-              <span id="span2">info.destinestudio@gmail.com</span>
+              Mail : <br />
+              info.destinestudio@gmail.com
             </li>
 
             <li>
@@ -137,7 +137,7 @@
           10 000€
         </p>
         <h2>Demander un devis personnalisé</h2>
-        <form action="send_mail.php" method="POST" class="form-contact">
+        <form id="contact-form" class="form-contact">
           <label for="nom">Nom :</label>
           <input type="text" id="nom" name="nom" required />
 
@@ -241,6 +241,41 @@
       bouton.addEventListener("click", () => {
         menu.classList.toggle("open");
       });
+    </script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("3Cvi_lOGTUbRJhaB6"); // ta Public Key
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const params = {
+            nom: document.getElementById("nom").value,
+            email: document.getElementById("email").value,
+            telephone: document.getElementById("telephone").value,
+            type: document.getElementById("type").value,
+            message: document.getElementById("message").value,
+          };
+
+          emailjs.send("service_ln1uegx", "template_zt1wcyg", params).then(
+            function () {
+              alert("Votre demande a été envoyée avec succès !");
+              document.getElementById("contact-form").reset();
+            },
+            function (error) {
+              console.log(error);
+              alert(
+                "Une erreur est survenue lors de l'envoi. Merci de réessayer plus tard.",
+              );
+            },
+          );
+        });
     </script>
   </body>
 </html>
