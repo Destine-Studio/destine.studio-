@@ -227,32 +227,33 @@
       });
     </script>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  (function() {
-    emailjs.init("3Cvi_lOGTUbRJhaB6"); // ta Public Key
-  })();
+  emailjs.init("3Cvi_lOGTUbRJhaB6");
 
-  document.getElementById("candidature-form").addEventListener("submit", function(e) {
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const params = {
       nom: document.getElementById("nom").value,
       email: document.getElementById("email").value,
-      cv: document.getElementById("cv").value,
-      lm: document.getElementById("lm").value
+      telephone: document.getElementById("telephone").value,
+      type: document.getElementById("type").value,
+      message: document.getElementById("message").value,
     };
 
     emailjs.send("service_ln1uegx", "template_zt1wcyg", params)
-      .then(function() {
-        alert("Votre candidature a été envoyée avec succès !");
-        document.getElementById("candidature-form").reset();
-      }, function(error) {
+      .then(() => {
+        alert("Votre demande a été envoyée avec succès !");
+        document.getElementById("contact-form").reset();
+      })
+      .catch((error) => {
         console.log(error);
         alert("Une erreur est survenue lors de l'envoi. Merci de réessayer plus tard.");
       });
   });
 </script>
+
 
   </body>
 </html>
