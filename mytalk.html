@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MyTalk – Documents juridiques & Support</title>
+    <link rel="stylesheet" href="mytalk.css" />
+    <link rel="icon" type="image/png" href="image/logo-mytalk-complet.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo" id="remonter">
+        <a href="index.html">
+          <img src="image/logo.png" alt="Logo Destine Studio" />
+        </a>
+      </div>
+
+      <div class="allmenu">
+        <button id="menu-bouton">
+          <img class="image-menu" src="image/menu-burger.png" alt="Menu" />
+        </button>
+
+        <nav class="menu" id="liste-menu">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="projet.html">Nos projets</a></li>
+            <li><a href="postule.html">Offres d'emploi</a></li>
+            <li><a href="sortie.html">André Destine</a></li>
+            <li><a href="document.html">Support & CGU</a></li>
+            <li><a href="mytalk.html">Support & CGU</a></li>
+            <li>
+              <a href="https://apps.apple.com/app/idXXXXXXXX">Ouvrir MyTalk</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SECTION LOGO MYTALK -->
+    <section class="mytalk-logo-section">
+      <h1>MyTalk icône</h1>
+
+      <div class="mytalk-logo-container">
+        <img src="image/logo-mytalk-complet.png" alt="Logo MyTalk" />
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="intro-section">
+      <h1>MyTalk</h1>
+      <p class="intro-text">
+        MyTalk est un réseau social de messagerie instantanée, de proximité
+        conçu pour faciliter les échanges, les rencontres et la mise en relation
+        entre les habitants, les communautés et les talents locaux. Et qui
+        permet de découvrir les bons plans autour de soi sur une carte
+        géographique. L’application met l’accent sur la communication simple,
+        l’expression libre et la création de groupes thématiques ou
+        communautaires, afin de renforcer les liens sociaux et valoriser les
+        initiatives locales.
+      </p>
+    </section>
+
+    <!-- DOCUMENTS -->
+    <section class="documents-section">
+      <h1>Documents juridiques</h1>
+      <h2 id="vigueur">En vigueur depuis le 10 février 2026</h2>
+
+      <div class="document-item">
+        <h2>Conditions Générales d’Utilisation (CGU)</h2>
+        <a href="document/CGU MyTalk.pdf" target="_blank" class="pdf-link">
+          📄 Ouvrir le document
+        </a>
+      </div>
+
+      <div class="document-item">
+        <h2>Charte de modération & Politique de confidentialité</h2>
+        <a
+          href="document/Charte de Modération MyTalk.pdf"
+          target="_blank"
+          class="pdf-link"
+        >
+          📄 Ouvrir le document
+        </a>
+      </div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="support-section">
+      <h1>Support & Assistance MyTalk</h1>
+
+      <div class="support-item">
+        <h2>Support général</h2>
+        <p>Pour toute demande administrative ou organisationnelle :</p>
+        <p class="email">📧 contact.mytalk@gmail.com</p>
+      </div>
+
+      <div class="support-item">
+        <h2>Support technique</h2>
+        <p>Pour un problème technique, un bug ou une réclamation :</p>
+        <p class="email">📧 support.mytalk@gmail.com</p>
+      </div>
+
+      <div class="support-item">
+        <h2>Signalement d’un utilisateur ou d’un contenu</h2>
+        <p>Pour signaler un comportement ou un contenu inapproprié :</p>
+        <p class="email">📧 moderation.mytalk@gmail.com</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="allfooter">
+      <div class="footer1">
+        <p class="footer-paragraphe1">
+          © 2026 Destine Studio SAS. Tous droits réservés.
+        </p>
+      </div>
+
+      <button id="bouton-remonter">
+        <a class="lienremonter" href="#remonter">Remonter en haut</a>
+      </button>
+
+      <div class="footer2">
+        <a class="lienfooter" href="https://app.destine.studio" target="_blank">
+          https://app.destine.studio/
+        </a>
+        <a class="lienfooter" href="index.html">Page d'accueil</a>
+        <a class="lienfooter" href="contact.html">Nous contacter</a>
+        <a class="lienfooter" href="postule.html">Offres d'emploi</a>
+        <a class="lienfooter" href="projet.html">Nos projets</a>
+        <a class="lienfooter" href="sortie.html">André Destine</a>
+        <a class="lienfooter" href="document.html">Support & CGU</a>
+      </div>
+    </footer>
+
+    <!-- SCRIPT MENU -->
+    <script>
+      const bouton = document.getElementById("menu-bouton");
+      const menu = document.getElementById("liste-menu");
+
+      bouton.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    </script>
+  </body>
+</html>
