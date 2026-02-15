@@ -21,7 +21,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #240046, #3c096c);
+  background: linear-gradient(
+    180deg,
+    #450050,
+    #e753fe
+  ); /* nouveau dégradé linéaire 180°*/
   animation: fadeOut 3s forwards 2.5s; /* durée + délai */
 }
 
@@ -224,6 +228,25 @@ header {
   transform: scale(1.05);
 }
 
+/* Présentation logo */
+
+.presentation-logo {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.presentation-logo img {
+  width: 180px; /* taille idéale */
+  height: auto;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.15));
+  transition: transform 0.3s ease-in-out;
+}
+
+.presentation-logo img:hover {
+  transform: scale(1.05);
+}
+
 /* PRESENTATION */
 
 #presentation {
@@ -405,6 +428,48 @@ img {
   background-color: magenta;
 }
 
+/* Vidéo */
+
+.presentation-video {
+  width: 100%;
+  max-width: 900px; /* largeur max */
+  margin: 40px auto 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.presentation-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+.presentation-video {
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.presentation-video video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh; /* limite la hauteur à 80% de l'écran */
+  object-fit: cover; /* évite les déformations */
+  display: block;
+  border-radius: 15px;
+}
+
 /* Portfolio */
 
 /* SECTION PORTFOLIO */
@@ -431,11 +496,11 @@ img {
 }
 
 .portfolio-item {
-  background-color: #f4f4f4;
+  background-color: transparent; /* suppression du fond gris */
   border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px; /* réduit le padding */
+  width: 260px; /* réduit légèrement la largeur */
+  box-shadow: none; /* optionnel : supprime l’ombre si tu veux un look plus épuré */
   transition: transform 0.3s ease-in-out;
   text-align: center;
 }
@@ -445,7 +510,7 @@ img {
 }
 
 .portfolio-item img {
-  width: 100%;
+  width: 95%; /* réduit légèrement la taille */
   height: auto;
   margin-bottom: 15px;
   border-radius: 8px;
