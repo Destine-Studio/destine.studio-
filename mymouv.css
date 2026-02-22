@@ -1,0 +1,313 @@
+/* RESET */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: "Courier New", Courier, monospace;
+  color: #240046;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #240046;
+  padding: 10px 20px;
+  height: 65px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* MENU BURGER */
+.allmenu {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.image-menu {
+  width: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.image-menu:hover {
+  transform: scale(1.1);
+}
+
+#menu-bouton {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.menu ul li {
+  margin: 10px 0;
+}
+
+.menu ul a {
+  text-decoration: none;
+  color: #240046;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu ul a:hover {
+  color: magenta;
+}
+
+/* SECTION LOGO MYMOUV */
+.mymouv-logo-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  text-align: center;
+}
+
+.mymouv-logo-container {
+  box-shadow: none; /* Retire l'ombre */
+  background-color: none; /* Retire le fond blanc */
+  padding: 0; /* Retire l'espace interne */
+  border-radius: 0; /* Retire les coins arrondis */
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mymouv-logo-container:hover {
+  transform: scale(1.03);
+}
+
+.mymouv-logo-container img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px; /* Tu peux mettre 0 si tu veux un logo carré */
+}
+
+/* INTRO SECTION */
+.intro-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3c096c;
+  text-align: justify;
+}
+
+/* TITRES */
+h1 {
+  text-align: center;
+  color: #3c096c;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#vigueur {
+  text-align: center;
+  color: #3c096c;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: small;
+}
+
+h2 {
+  color: #240046;
+  margin-bottom: 10px;
+}
+
+/* DOCUMENTS */
+.documents-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+.document-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.document-item:hover {
+  transform: scale(1.02);
+}
+
+.pdf-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #240046;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.pdf-link:hover {
+  background-color: magenta;
+}
+
+/* SUPPORT */
+.support-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+}
+
+.support-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.support-item:hover {
+  transform: scale(1.02);
+}
+
+.email {
+  font-weight: bold;
+  color: #3c096c;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+.allfooter {
+  background-color: #240046;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer1 {
+  margin-bottom: 10px;
+  color: #e0aaff;
+}
+
+.footer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e0aaff;
+}
+
+.lienfooter {
+  text-decoration: none;
+  color: #e0aaff;
+  margin: 8px 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.lienfooter:hover {
+  color: magenta;
+  text-decoration: underline;
+}
+
+/* BOUTON REMONTER */
+#bouton-remonter {
+  margin: 15px auto;
+  background-color: #444;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#bouton-remonter a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#bouton-remonter a:hover {
+  color: magenta;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .menu {
+    right: 0;
+    left: 0;
+    width: 90%;
+    margin: auto;
+  }
+
+  .intro-section {
+    padding: 15px;
+  }
+
+  .document-item,
+  .support-item {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer2 {
+    font-size: 0.9rem;
+  }
+}
